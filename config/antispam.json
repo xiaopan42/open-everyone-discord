@@ -1,0 +1,6 @@
+{
+    "maxMentions": 4,
+    "duplicateInterval": 10000,
+    "blacklist": ["nigger"]
+  }
+  
