@@ -9,7 +9,8 @@ const client = new Client({
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildVoiceStates,
         GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMembers 
     ]
 });
 
@@ -37,10 +38,7 @@ for (const file of eventFiles) {
     }
 }
 
-const { handleMessage } = require("./utils/antiSpam");
-
 client.on("messageCreate", async (msg) => {
-  handleMessage(msg); // 自動執行防炸檢查
 });
 
 client.login(process.env.DISCORD_TOKEN);
