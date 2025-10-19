@@ -26,10 +26,10 @@ module.exports = {
         try {
             const member = await interaction.guild.members.fetch(target.id);
             await member.ban({ reason: reason });
-            return interaction.reply(`✅${target.tag} 已從這個伺服器封鎖! 原因：${reason}`);
+            return interaction.reply(`✅ ${target.tag} ban by server ! reason：${reason}`);
         } catch (error) {
             console.error(error);
-            return interaction.reply('❌無法封鎖該成員。');
+            return interaction.reply('❌ 無法封鎖該成員。');
         }
     },
 };

@@ -1,8 +1,16 @@
+// events/ready.js
+const { Events } = require('discord.js');
+
 module.exports = {
-    name: 'ready',
-    once: true, 
+    name: Events.ClientReady, 
+    once: true,
     execute(client) {
-        console.log(`✅ ${client.user.tag} 已上線！`);
-        client.user.setActivity('open everyone bot v1.0', { enum: 'PLAYING' });
-    }
+        console.log(`🤖 Bot 已啟動並登入：${client.user.tag}`);
+
+        // 設定遊玩文字 / 狀態
+        client.user.setPresence({
+            activities: [{ name: '正在開發中', type: 0 }], 
+            status: 'online', // 可選: online / idle / dnd / invisible
+        });
+    },
 };

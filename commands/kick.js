@@ -26,7 +26,7 @@ module.exports = {
         try {
             const member = await interaction.guild.members.fetch(target.id);
             await member.kick(reason);
-            return interaction.reply(`✅ ${target.tag} 已從這個伺服器踢出! 原因：${reason}`);
+            return interaction.reply(`✅ ${target.tag} kick by server ! reason：${reason}`);
         } catch (error) {
             console.error(error);
             return interaction.reply('❌ 無法踢出該成員。');

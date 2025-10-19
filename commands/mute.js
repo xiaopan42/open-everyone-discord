@@ -44,10 +44,10 @@ module.exports = {
             // 設定禁言
             await member.timeout(muteDuration, reason);
 
-            return interaction.reply(`✅${target.tag} 成功禁言 持續 ${duration} 分鐘 原因：${reason}`);
+            return interaction.reply(`✅ ${target.tag} 成功禁言 持續 ${duration} 分鐘 原因：${reason}`);
         } catch (error) {
             console.error(error);
-            return interaction.reply('❌禁言失敗。');
+            return interaction.reply('❌ 禁言失敗。');
         }
     },
 };
