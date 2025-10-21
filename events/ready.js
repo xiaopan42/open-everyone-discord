@@ -9,7 +9,7 @@ module.exports = {
 
         // 設定遊玩文字 / 狀態
         client.user.setPresence({
-            activities: [{ name: '正在開發中', type: 0 }], 
+            activities: [{ name: '測試階段 0.1', type: 0 }], 
             status: 'online', // 可選: online / idle / dnd / invisible
         });
     },
